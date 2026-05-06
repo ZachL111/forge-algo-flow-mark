@@ -1,0 +1,73 @@
+{
+  "repo": "forge-algo-flow-mark",
+  "language": "OCaml",
+  "category": "Algorithms",
+  "goal": "Package an OCaml local lab for flow analysis with layout fixtures, stable geometry snapshots, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "input width",
+      "search depth",
+      "boundary pressure",
+      "complexity"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input width",
+      "signal": 61,
+      "slack": 31,
+      "drag": 27,
+      "confidence": 65,
+      "score": 137,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "search depth",
+      "signal": 71,
+      "slack": 25,
+      "drag": 23,
+      "confidence": 50,
+      "score": 148,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "boundary pressure",
+      "signal": 64,
+      "slack": 26,
+      "drag": 21,
+      "confidence": 58,
+      "score": 149,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "complexity",
+      "signal": 82,
+      "slack": 31,
+      "drag": 19,
+      "confidence": 85,
+      "score": 223,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input width",
+      "signal": 81,
+      "slack": 53,
+      "drag": 12,
+      "confidence": 67,
+      "score": 246,
+      "lane": "ship"
+    }
+  ]
+}
