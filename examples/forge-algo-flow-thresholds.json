@@ -1,0 +1,17 @@
+{
+  "repo": "forge-algo-flow-mark",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 152,
+    "watch": 117
+  },
+  "terms": [
+    "input width",
+    "search depth",
+    "boundary pressure",
+    "complexity"
+  ]
+}
